@@ -147,6 +147,10 @@
             </div>
         </div>
     </div>
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
 </body>
 <script>
     let datetxt = "06/11/1999";
@@ -266,5 +270,12 @@
         },6000)
     }
     
+    $("#btn__letter").on("click", function(){
+    // Bắt đầu phát nhạc
+    document.getElementById("background-music").play();
+
+    $(".box__letter").slideDown();
+    // Phần code hiển thị thư ở đây...
+    });
 </script>
 </html>
